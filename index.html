@@ -1,740 +1,979 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Let's Begin Here: Approaching Craft in Fiction Through Character</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-.container {
-  max-width: 100%;
-  background-color: rgba(236, 236, 236, 1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-}
-
-/* Header styles */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-
-.header-sub {
-  display: flex;
-  width: -webkit-fill-available;
-  align-items: flex-end;
-  flex-direction: column;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  padding: 20px;
-  border: 1px solid #ccc;
-}
-
-.search-container {
-  display: flex;
-  align-items: center;
-}
-
-.search-container input[type="text"] {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-right: 10px;
-}
-
-.search-container button {
-  padding: 8px 12px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.menu li {
-  margin-left: 20px;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-.menu a.active {
-  color: #4CAF50;
-}
-
-/* Main content styles */
-.main-content {
-  padding: 20px;
-  margin: 0 7vw;
-}
-
-.class-details {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-
-.class-info {
-  flex: 2;
-}
-
-.price-section {
-  flex: 1;
-  text-align: center;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-}
-
-.instructor-info {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.instructor-image {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.class-description {
-  line-height: 1.6;
-}
-
-.class-schedule {
-  margin-top: 30px;
-}
-
-.class-schedule h2 {
-  margin-bottom: 15px;
-}
-
-.schedule-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-.schedule-table th, .schedule-table td {
-  padding: 8px;
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-.schedule-table th {
-  background-color: #f9f9f9;
-}
-
-/* Footer styles */
-.footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-/* Hero Section */
-.hero-section {
-  background-color: #f9f9f9;
-  margin: 0 7vw;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-}
-
-.hero-section h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.hero-section p {
-  font-size: 16px;
-  color: #666;
-}
-
-/* List of classes */
-.classes-section {
-  padding: 20px;
-}
-
-.classes-section h2 {
-  margin-bottom: 20px;
-}
-
-.class-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
-  margin-bottom: 15px;
-}
-
-.class-card h3 {
-  margin-bottom: 10px;
-}
-
-.class-card p {
-  font-size: 14px;
-  color: #555;
-}
-
-.btn {
-  padding: 10px 15px;
-  background-color: #5cb85c;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn-primary {
-  background-color: #007bff;
-}
-
-.btn-success {
-  background-color: #5cb85c;
-}
-
-.btn-danger {
-  background-color: #d9534f;
-}
-
-/* Additional Styles for this page */
-.tag {
-  display: inline-block;
-  background-color: #e9ecef;
-  color: #495057;
-  padding: 0.25em 0.4em;
-  font-size: 75%;
-  font-weight: 700;
-  line-height: 1;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: 0.25rem;
-  margin-right: 5px;
-}
-
-.class-schedule {
-  margin-top: 20px;
-}
-
-.class-schedule h2 {
-  margin-bottom: 15px;
-}
-
-.schedule-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-.schedule-table th, .schedule-table td {
-  padding: 8px;
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-.schedule-table th {
-  background-color: #f9f9f9;
-}
-.similar-classes-section {
-    margin-top: 40px;
-}
-
-.similar-class-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 15px;
-}
-
-.similar-class-card h3 {
-    margin-bottom: 10px;
-    font-size: 1.2em;
-}
-
-.similar-class-card p {
-    font-size: 0.9em;
-    color: #555;
-}
-.about-section {
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-}
-
-.about-section h2 {
-    margin-bottom: 15px;
-}
-
-.about-section p {
-    line-height: 1.6;
-}
-.cancellation-section {
-    padding: 20px;
-}
-
-.cancellation-section h2 {
-    margin-bottom: 15px;
-}
-
-.cancellation-section p {
-    line-height: 1.6;
-}
-
-.cancellation-details {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.cancellation-policy {
-    text-align: center;
-}
-
-.cancellation-policy h3 {
-    margin-bottom: 10px;
-}
-
-.cancellation-policy p {
-    font-size: 0.9em;
-}
-/* Footer Styling */
-footer {
-    background-color: #343a40;
-    color: white;
-    padding: 30px 0;
-    margin-top: 50px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.footer-section {
-    margin-bottom: 20px;
-}
-
-.footer-section h4 {
-    color: #f8f9fa;
-    border-bottom: 1px solid #6c757d;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 5px;
-}
-
-.footer-section ul li a {
-    color: #adb5bd;
-    text-decoration: none;
-}
-
-.contact-info p {
-    color: #adb5bd;
-    margin: 5px 0;
-}
-
-.newsletter form {
-    display: flex;
-}
-
-.newsletter input[type="email"] {
-    padding: 8px;
-    margin-right: 5px;
-    border: 1px solid #495057;
-    border-radius: 4px;
-    background-color: #343a40;
-    color: #fff;
-}
-
-.newsletter button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.social-links a {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 20px;
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #6c757d;
-    color: #adb5bd;
-}
-
-.footer-bottom a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-/* Additional Styles */
-.course-tags {
-    margin-bottom: 15px;
-}
-/* Modified price-section */
-.price-section {
-    flex: 1;
-    text-align: center;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-left: 20px; /* Added margin to separate from class info */
-}
-
-.price-section h2 {
-    font-size: 2em;
-    color: #28a745; /* Green color for prominence */
-    margin-bottom: 5px;
-}
-
-.price-section p {
-    font-size: 1.2em;
-    color: #6c757d; /* Gray color for less emphasis */
-    margin-bottom: 15px;
-}
-
-.price-section a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff; /* Primary blue for call to action */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.price-section a:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-.course-title {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    color: #343a40; /* Dark gray for a professional look */
-}
-
-.instructor-info {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    color: #495057; /* Slightly lighter than course title */
-}
-
-.instructor-image {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-right: 15px;
-    border: 2px solid #ddd; /* Subtle border for the image */
-}
-
-.instructor-name {
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.course-description {
-    font-size: 1em;
-    line-height: 1.7;
-    color: #555; /* More readable color for the description */
-    margin-bottom: 20px;
-}
-
-.share-buttons {
-    margin-top: 20px;
-}
-
-.share-buttons a {
-    display: inline-block;
-    margin-right: 10px;
-    font-size: 1.2em;
-    color: #007bff; /* Primary blue for share buttons */
-}
-
-.share-buttons a:hover {
-    color: #0056b3; /* Darker blue on hover */
-}
-/* Instructor Profile Box */
-.instructor-profile {
-    background-color: #f8f9fa; /* Light background for the box */
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.instructor-profile h3 {
-    margin-bottom: 10px;
-    color: #343a40;
-}
-
-.instructor-profile img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 2px solid #ddd;
-    margin-right: 15px;
-    float: left; /* Allows text to wrap around the image */
-}
-
-.instructor-profile p {
-    font-size: 0.9em;
-    line-height: 1.6;
-    color: #555;
-}
-
-.instructor-profile .clear {
-    clear: both; /* Ensures that the content below the profile box starts on a new line */
-}
-
-/* Button to see instructor's reviews */
-.instructor-reviews {
-    text-align: center;
-    margin-top: 15px;
-}
-
-.instructor-reviews a {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #28a745; /* Green color for visibility */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.instructor-reviews a:hover {
-    background-color: #218838; /* Darker green on hover */
-}
-
-</style>
+  <title>Let's Begin Here: Approaching Craft in Fiction Through Character</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Yatra+One&display=swap"
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Yatra+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      box-sizing: border-box;
+    }
+
+    hr{
+      margin:0 3vw;
+    }
+    .container {
+      max-width: 100%;
+      background-color: rgba(236, 236, 236, 1);
+      /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+      padding: 20px;
+    }
+
+    /* Header styles */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: white;
+    }
+
+    .header-sub {
+      display: flex;
+      width: -webkit-fill-available;
+      align-items: flex-end;
+      flex-direction: column;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-container input[type="text"] {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+
+    .search-container button {
+      padding: 8px 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    .menu li {
+      margin-left: 20px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .menu a.active {
+      color: #4CAF50;
+    }
+
+    /* Main content styles */
+    .main-content {
+      /* padding: 20px; */
+      margin: 0 8vw;
+    }
+
+    .class-details {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    .class-info {
+      /* flex:1; */
+      width: 70%;
+    }
+
+    .prices {
+      display: flex;
+      justify-content: space-evenly;
+      border: 1px solid #000000;
+      border-radius: 8px 8px 0 0;
+      box-sizing: content-box;
+
+      font-family: PT Sans;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24.84px;
+      letter-spacing: 0%;
+      text-align: center;
+
+
+    }
+
+    .prices div {
+      color: rgba(67, 67, 67, 1);
+      width: 100%;
+    }
+
+    .price-member {
+      border-right: 1px solid #000000;
+      box-sizing: content-box;
+    }
+
+    .instructor-info {
+      display: flex;
+      align-items: center;
+
+
+
+
+    }
+
+
+    .event-container {
+      display: flex;
+      /* align-items: center; */
+      gap: 20px;
+      padding: 15px;
+      justify-content: space-evenly;
+
+
+    }
+
+    .event-item {
+      display: flex;
+      /* align-items: center; */
+      gap: 10px;
+      /* height: 100%; */
+
+    }
+
+    .event-item span {
+      font-family: PT Sans;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 2%;
+
+    }
+
+    .event-item i {
+      color: rgba(220, 54, 54, 1);
+      font-size: 18px;
+    }
+
+    .date,
+    .address,
+    .time {
+      font-size: 14px;
+    }
+
+    .border-btw {
+      height: 4vw;
+      border-right: 1px solid #000000;
+    }
+
+    .highlight {
+      color: rgba(220, 54, 54, 1);
+    }
+
+
+    .course-buttons {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .instructor-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .class-description {
+      line-height: 1.6;
+    }
+
+    .class-schedule {
+      margin-top: 30px;
+    }
+
+    .class-schedule h2 {
+      margin-bottom: 15px;
+      font-family: Montserrat;
+      /* font-family: PT Sans; */
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: 2%;
+
+    }
+
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+      padding: 8px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .schedule-table th {
+      background-color: #f9f9f9;
+    }
+
+    /* Footer styles */
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background-color: white;
+      margin: 0 8vw;
+      padding: 2.5vw;
+      margin-bottom: 20px;
+      /* border-radius: 8px; */
+    }
+
+    .class-info h1 {
+      margin-bottom: 20px;
+
+      /* font-family: Montserrat; */
+      font-weight: 900;
+      /* font-size: 36px; */
+      line-height: 47px;
+      letter-spacing: 2%;
+
+    }
+
+    .hero-section p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    /* List of classes */
+    .classes-section {
+      padding: 20px;
+    }
+
+    .classes-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .class-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+
+    .class-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .class-card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .class-schedule {
+      margin-top: 20px;
+    }
+
+    .class-schedule h2 {
+      margin-bottom: 15px;
+    }
+
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+      padding: 8px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .schedule-table th {
+      background-color: #f9f9f9;
+    }
+
+    .similar-classes-section {
+      margin-top: 40px;
+    }
+
+    .similar-class-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+
+    .similar-class-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    .similar-class-card p {
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .about-section {
+      background-color: #f9f9f9;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    .about-section h2 {
+      margin-bottom: 15px;
+    }
+
+    .about-section p {
+      line-height: 1.6;
+    }
+
+    .cancellation-section {
+      padding: 20px;
+    }
+
+    .cancellation-section h2 {
+      margin-bottom: 15px;
+    }
+
+    .cancellation-section p {
+      line-height: 1.6;
+    }
+
+    .cancellation-details {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .cancellation-policy {
+      text-align: center;
+    }
+
+    .cancellation-policy h3 {
+      margin-bottom: 10px;
+    }
+
+    .cancellation-policy p {
+      font-size: 0.9em;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 30px 0;
+      margin-top: 50px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .footer-section {
+      margin-bottom: 20px;
+    }
+
+    .footer-section h4 {
+      color: #f8f9fa;
+      border-bottom: 1px solid #6c757d;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 5px;
+    }
+
+    .footer-section ul li a {
+      color: #adb5bd;
+      text-decoration: none;
+    }
+
+    .contact-info p {
+      color: #adb5bd;
+      margin: 5px 0;
+    }
+
+    .newsletter form {
+      display: flex;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 8px;
+      margin-right: 5px;
+      border: 1px solid #495057;
+      border-radius: 4px;
+      background-color: #343a40;
+      color: #fff;
+    }
+
+    .newsletter button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .social-links a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 20px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #6c757d;
+      color: #adb5bd;
+    }
+
+    .footer-bottom a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .tag {
+      border-radius: 25px;
+      font-family: PT Sans;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 27px;
+      letter-spacing: 2%;
+      text-align: center;
+
+      padding: 12px 24px;
+      color: rgba(67, 67, 67, 1);
+      margin-left: 16px;
+
+    }
+
+    .tag.fiction {
+      background-color: rgba(220, 54, 54, 0.533);
+
+    }
+
+    .tag.advanced {
+      background-color: rgba(67, 67, 67, 0.575);
+
+    }
+
+    /* Modified price-section */
+    .price-section {
+      /* flex: 1; */
+      text-align: center;
+      padding: 20px;
+      /* border: 1px solid #ddd; */
+      border-radius: 8px;
+      /* margin-left: 20px; */
+    }
+
+    .price-section h2 {
+      font-size: 2em;
+      color: rgba(67, 67, 67, 1);
+      margin-bottom: 5px;
+    }
+
+    .price-section p {
+      font-size: 1.2em;
+      color: #6c757d;
+      /* Gray color for less emphasis */
+      margin-bottom: 15px;
+    }
+
+    .price-section a {
+      display: inline-block;
+      padding: 10px 20px;
+      /* background-color: rgba(220, 54, 54, 1); */
+      /* Primary blue for call to action */
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      /* Smooth transition for hover effect */
+
+      font-family: PT Sans;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 27px;
+      letter-spacing: 2%;
+      text-align: center;
+    }
+
+    .price-section a:hover {
+      background-color: #0056b3;
+      /* Darker blue on hover */
+    }
+
+    .sign-up {
+      background-color: rgba(220, 54, 54, 1);
+      /* width: 100%; */
+      border-radius: 0 0 8px 8px !important;
+      border: 1px solid black;
+      border-top: none;
+    }
+
+    .Apply-for {
+      background-color: white;
+      margin-top: 10px;
+      color: rgba(67, 67, 67, 1) !important;
+      border: 1px solid black;
+
+
+
+    }
+
+    .course-title {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #343a40;
+      /* Dark gray for a professional look */
+    }
+
+
+    .instructor-image {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 15px;
+      border: 2px solid #ddd;
+      /* Subtle border for the image */
+    }
+
+    .instructor-name {
+      font-size: 1.2em;
+      font-weight: bold;
+      border: 1px solid black;
+      border-radius: 25px;
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .instructor-name img {
+      padding-right: 10px;
+    }
+
+    .course-description {
+      font-size: 1em;
+      line-height: 1.7;
+      color: #555;
+      /* More readable color for the description */
+      margin-bottom: 20px;
+    }
+
+    .share-buttons {
+      margin-top: 20px;
+    }
+
+    .share-buttons a {
+      display: inline-block;
+      font-size: small;
+      margin-right: 10px;
+      padding: 2px;
+      width: 25px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.367);
+      border-radius: 50%;
+      color: rgba(255, 255, 255);
+    }
+
+    .share-buttons a:hover {
+      color: #0056b3;
+      /* Darker blue on hover */
+    }
+
+    .profile {
+      display: flex;
+      background-color: white;
+    }
+
+    /* Instructor Profile Box */
+    .instructor-profile {
+      background-color: rgba(243, 155, 78, 0.2);
+      padding: 25px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 70%;
+    }
+
+    .instructor-profile h3 {
+      margin-bottom: 10px;
+      color: #343a40;
+    }
+
+    .instructor-profile img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 2px solid #ddd;
+      margin-right: 15px;
+      float: left;
+      /* Allows text to wrap around the image */
+    }
+
+    .instructor-profile p {
+
+      color: rgba(67, 67, 67, 1);
+
+      font-family: PT Sans;
+font-weight: 400;
+font-size: 18px;
+line-height: 28px;
+letter-spacing: 2%;
+    }
+
+
+    /* Button to see instructor's reviews */
+    .instructor-reviews {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .instructor-reviews a {
+      display: inline-block;
+      padding: 8px 20px;
+      /* Green color for visibility */
+      color:rgba(220, 54, 54, 1);
+      border: 1px solid rgba(220, 54, 54, 1);
+      text-decoration: none;
+      background-color: white;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
+
+      font-family: PT Sans;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 27px;
+      letter-spacing: 2%;
+      text-align: center;
+
+    }
+
+    .instructor-reviews a:hover {
+      background-color: rgba(188, 34, 34, 0.512);
+      color: white;
+      /* Darker green on hover */
+    }
+
+    .instructor-words {
+      padding: 25px;
+      /* width: 70%; */
+
+      font-family: PT Sans;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 2%;
+
+    }
+
+
+  </style>
 </head>
+
 <body>
 
-<div class="container">
 
-    <!-- Header -->
-    <header class="header">
-        <div class="logo">Logo</div>
-        <div class="header-sub">
-          <div class="search-container">
-              <input type="text" placeholder="Search">
-              <button>Search</button>
-          </div>
-          <nav>
-              <ul class="menu">
-                  <li><a href="#">Classes</a></li>
-                  <li><a href="#">Programs & Events</a></li>
-                  <li><a href="#">Blogs</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Get Involved</a></li>
-                  <li><a href="#">Find a Class</a></li>
-              </ul>
-          </nav>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Logo</div>
+    <div class="header-sub">
+      <div class="search-container">
+        <input type="text" placeholder="Search">
+        <button>Search</button>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="#">Classes</a></li>
+          <li><a href="#">Programs & Events</a></li>
+          <li><a href="#">Blogs</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Get Involved</a></li>
+          <li><a href="#">Find a Class</a></li>
+        </ul>
+      </nav>
 
-        </div>
-    </header>
+    </div>
+  </header>
 
+  <div class="container">
     <!-- Hero Section -->
     <section class="hero-section">
-        <!-- Example content for a captivating hero section -->
-        <h1>Unlock Your Potential with Our Expert-Led Courses</h1>
-        <p>Explore a wide range of subjects and enhance your skills with our engaging and informative classes.</p>
+
+      <div class="class-details">
+        <div class="class-info">
+          <h1 class="course-title">Let's Begin Here: Approaching Craft in Fiction Through Character</h1>
+          <div class="instructor-info">
+            <!-- <img src="https://wisdomlabs.com/wp-content/uploads/2023/11/David-Willaim-Hill-400x400.jpeg" alt="Instructor" class="instructor-image"> -->
+            <div>
+              <div class="instructor-name"> <img src="assets/svgs/avatar.svg" alt="avatar">David William Hill</div>
+            </div>
+
+            <span class="tag fiction">Fiction</span>
+            <span class="tag advanced">Advanced</span>
+
+          </div>
+
+        </div>
+
+        <div class="price-section">
+          <div class="prices">
+            <div class="price-member">
+
+              <h2>$200</h2>
+              <p>Member</p>
+            </div>
+            <div class="price-non-member">
+              <h2>$259</h2>
+              <p>Non-Member</p>
+            </div>
+
+          </div>
+          <div class="course-buttons">
+
+            <a class="sign-up" href="#">Sign Up</a>
+            <a class="Apply-for" href="#">Apply for Reduced-Rate Spot</a>
+          </div>
+        </div>
+      </div>
+      <div class="event-container">
+        <div class="event-item">
+          <i class="fa fa-calendar"></i>
+          <span class="date">
+            <strong>Jan 05 - Feb 15</strong> <span class="highlight">(5 Wednesdays)</span>
+            <p>10:00am - 4:00pm (PST)</p>
+          </span>
+        </div>
+        <!-- <div class="border-btw"></div> -->
+         <hr>
+        <div class="event-item">
+          <i class="fa fa-map-marker-alt"></i>
+          <span class="address">2042 Balboa St., San Francisco, CA 94121</span>
+        </div>
+        <!-- <div class="border-btw"></div> -->
+         <hr>
+        <div class="event-item">
+          <i class="fa fa-clock"></i>
+          <span class="time">
+            <strong>Registration deadline:</strong>
+            <p>May 07 at 10:30am (PST)</p>
+          </span>
+        </div>
+
+      </div>
+
+
     </section>
 
     <!-- Main Content -->
     <section class="main-content">
-        <h1 class="course-title">Let's Begin Here: Approaching Craft in Fiction Through Character</h1>
-        <div class="class-details">
-            <div class="class-info">
-                <div class="instructor-info">
-                    <!-- <img src="https://wisdomlabs.com/wp-content/uploads/2023/11/David-Willaim-Hill-400x400.jpeg" alt="Instructor" class="instructor-image"> -->
-                    <div>
-                        <div class="instructor-name">David William Hill</div>
-                    </div>
-                </div>
-                <div class="course-tags">
-                    <span class="tag">Fiction</span>
-                    <span class="tag">Advanced</span>
-                </div>
-                <p class="course-description">In order to write, one must read constantly, observe the world well, and take seriously the craft of writing. During this five-week course, we will focus on the last of these, the craft of writing–specifically, we will focus on three mainstays of fiction: character, dialogue, and scene.</p>
-                <p class="course-description">"I think that writers often feel more comfortable writing exposition and summary than scene, perhaps because in our own lives we often feel more comfortable observing than engaging, and scene is about getting our characters to engage," says instructor Lori Ostlund. In this class we will focus on creating scenes as a way to develop characters, demonstrate changes in them, and increase tension.</p>
-                <p class="course-description">"We will also spend a lot of time on dialogue, thinking about it as a way to reveal character and relationships and, perhaps most important, as a way to reveal the shifting power dynamics that are at work in those relationships and which create tension."</p>
-                <p class="course-description">We will look at examples from short stories and novels and engage in in-class exercises that focus on these three craft building blocks. Participants will use these exercises to create work at home, which we will workshop during the last two weeks of class. "My goal," Lori says, "is for us to think about these craft elements in ways that are new and generative."</p>
 
-                <!-- Share Buttons -->
-                <div class="share-buttons">
-                    Share:
-                    <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#"><i class="fab fa-twitter-square"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-envelope-square"></i></a>
-                </div>
-            </div>
+      <section class="profile">
+        <div class="instructor-words">
 
-            <div class="price-section">
-                <h2>$200</h2>
-                <p>Member</p>
-                <h2>$259</h2>
-                <p>Non-Member</p>
-                <a href="#">Sign Up</a>
-                <a href="#">Apply for Reduced-Rate Spot</a>
-                <p><i class="fa fa-calendar"></i>Registration deadline: May 07 at 10:30am (PST)</p>
-            </div>
-        </div>
+          <p class="course-description">In order to write, one must read constantly, observe the world well, and take seriously the craft of writing. During this five-week course, we will focus on the last of these, the craft of writing—specifically, we will focus on three mainstays of fiction: character, dialogue, and scene.
+            <br><br>
+            “I think that writers often feel more comfortable writing exposition and summary than scene, perhaps because in our own lives we often feel more comfortable observing than engaging, and scene is about getting our characters to engage,” says instructor Lori Ostlund. “In this class we will focus on creating scenes as a way to develop characters, demonstrate changes in them, and increase tension.
+            <br><br>
+            “We will also spend a lot of time on dialogue, thinking about it as a way to reveal character and relationships and, perhaps most important, as a way to reveal the shifting power dynamics that are at work in those relationships and which create tension.”
+            <br><br>
+            We will look at examples from short stories and novels and engage in in-class exercises that focus on these three craft building blocks. Participants will use these exercises to create work at home, which we will workshop during the last two weeks of class. “My goal,” Lori says, “is for us to think about these craft elements in ways that are new and generative.”
+          </p>
 
-        <!-- Class Schedule -->
-        <div class="class-schedule">
+          <!-- Share Buttons -->
+          <div class="share-buttons">
+            <strong style="color: #535353ca;">Share </strong>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa fa-link"></i></a>
+          </div>
+
+          <!-- Class Schedule -->
+          <div class="class-schedule">
             <h2>Class Schedule</h2>
             <p><b>Time:</b> 10:30am - 4:00pm (PST)</p>
             <table class="schedule-table">
-                <thead>
-                    <tr>
-                        <th>Dates:</th>
-                        <th>Tue 6/15</th>
-                        <th>Tue 6/20</th>
-                        <th>Tue 6/24</th>
-                        <th>Tue 6/30</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
+              <thead>
+                <tr>
+                  <th>Dates:</th>
+                  <th>Tue </th>
+                  <th>Tue </th>
+                  <th>Tue </th>
+                  <th>Tue </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>6/15</td>
+                  <td>6/20</td>
+                  <td>6/24</td>
+                  <td>6/30</td>
+                </tr>
+              </tbody>
             </table>
+          </div>
         </div>
 
         <!-- Instructor Profile Box -->
         <div class="instructor-profile">
-            <img src="https://via.placeholder.com/100" alt="John Doe" style="float:left; margin-right:15px;">
-            <h3>John Doe</h3>
-            <p>John Doe , MFA, writes fiction and nonfiction with a special emphasis on the power of place. Her work has been anthologized and published in venues such as Atlas Obscura, The Los Angeles Times, The Sun, and Best Women's Travel Writing. She loves to help her students surprise and delight themselves (and others), whether she's teaching at San Jose University or New York, the San Francisco Women’s Jail, or The Writing Salon. After many years of living abroad (from Oaxaca to Quito to Sao Paulo to Costa Rica), she now lives in San Francisco. She is now the author of Living Abroad in Costa Rica.</p>
-            <div class="clear"></div> <!-- Ensures content below doesn't wrap around the image -->
-            <div class="instructor-reviews">
-                <a href="#">See John's Reviews</a>
-            </div>
+          <img src="assets/svgs/john-doe.svg" alt="John Doe" style="float:left; margin-right:15px;">
+          <!-- <h3>John Doe</h3> -->
+          <p><strong style="color: #009ba6ba;">John Doe </strong> , MFA, writes fiction and nonfiction with a special emphasis on the power of place. Her work has
+            been anthologized and published in venues such as Atlas Obscura, The Los Angeles Times, The Sun, and Best
+            Women's Travel Writing. She loves to help her students surprise and delight themselves (and others), whether
+            she's teaching at San Jose University or New York, the San Francisco Women’s Jail, or The Writing Salon.
+            After many years of living abroad (from Oaxaca to Quito to Sao Paulo to Costa Rica), she now lives in San
+            Francisco. She is now the author of Living Abroad in Costa Rica.</p>
+          <div class="clear"></div> <!-- Ensures content below doesn't wrap around the image -->
+          <div class="instructor-reviews">
+            <a href="#">See John's Reviews</a>
+          </div>
         </div>
+      </section>
 
-         <!-- Similar Classes Section -->
-         <section class="similar-classes-section">
-            <h2>Similar Classes</h2>
-            <div class="similar-class-card">
-                <h3>The Art of the Prose Sentence: Challenging Your Sentences to Do More</h3>
-                <p>Learn More ></p>
-            </div>
-            <div class="similar-class-card">
-                <h3>The Art of the Prose Sentence: Challenging Your Sentences to Do More</h3>
-                <p>Learn More ></p>
-            </div>
-            <div class="similar-class-card">
-                <h3>The Art of the Prose Sentence: Challenging Your Sentences to Do More</h3>
-                <p>Learn More ></p>
-            </div>
-        </section>
-        <!-- About Section -->
-        <section class="about-section">
-            <h2>About the Remote Classes</h2>
-            <p>You will be able to participate in live class meetings via Zoom videoconference. To attend classes, you’ll need a phone, tablet or computer and access to the Internet. You can participate in the class from wherever you’d like, whether on your living room couch or in your office. Before your class meets, you’ll receive an email from The Proprietary with more information about Zoom and your remote class. If you have any questions about remote learning, please don’t hesitate to reach out to us at <a href="mailto:hello@wisdomlabs.com">hello@wisdomlabs.com</a>.</p>
-            <a href="#">Learn About Our Classes ></a>  <a href="#">Questions? See FAQ ></a>
-        </section>
+      <!-- Similar Classes Section -->
+      <section class="similar-classes-section">
+        <h2>Similar Classes</h2>
+        <div class="similar-class-card">
+          <h3>The Art of the Prose Sentence: Challenging Your Sentences to Do More</h3>
+          <p>Learn More ></p>
+        </div>
+        <div class="similar-class-card">
+          <h3>The Art of the Prose Sentence: Challenging Your Sentences to Do More</h3>
+          <p>Learn More ></p>
+        </div>
+        <div class="similar-class-card">
+          <h3>The Art of the Prose Sentence: Challenging Your Sentences to Do More</h3>
+          <p>Learn More ></p>
+        </div>
+      </section>
+      <!-- About Section -->
+      <section class="about-section">
+        <h2>About the Remote Classes</h2>
+        <p>You will be able to participate in live class meetings via Zoom videoconference. To attend classes, you’ll
+          need a phone, tablet or computer and access to the Internet. You can participate in the class from wherever
+          you’d like, whether on your living room couch or in your office. Before your class meets, you’ll receive an
+          email from The Proprietary with more information about Zoom and your remote class. If you have any questions
+          about remote learning, please don’t hesitate to reach out to us at <a
+            href="mailto:hello@wisdomlabs.com">hello@wisdomlabs.com</a>.</p>
+        <a href="#">Learn About Our Classes ></a> <a href="#">Questions? See FAQ ></a>
+      </section>
 
-        <!-- Cancellation Policy Section -->
-        <section class="cancellation-section">
-            <h2>Cancellation Policy</h2>
-            <p>In the event of an emergency, we may consider a refund or credit, whether partial or full. We review these requests on a case-by-case basis, and we ask that you notify us as near as possible to the start date for the class. Please read our policy details before requesting.</p>
+      <!-- Cancellation Policy Section -->
+      <section class="cancellation-section">
+        <h2>Cancellation Policy</h2>
+        <p>In the event of an emergency, we may consider a refund or credit, whether partial or full. We review these
+          requests on a case-by-case basis, and we ask that you notify us as near as possible to the start date for the
+          class. Please read our policy details before requesting.</p>
 
-            <div class="cancellation-details">
-                <div class="cancellation-policy">
-                    <h3>10 days or more</h3>
-                    <p>before the start date for a class, the registrant will receive a credit minus a 10% fee OR a refund minus a 20% fee.</p>
-                </div>
-                <div class="cancellation-policy">
-                    <h3>3-9 days</h3>
-                    <p>before the start date for a class, the registrant will receive a credit minus a 15% fee OR a refund minus a 30% fee.</p>
-                </div>
-                <div class="cancellation-policy">
-                    <h3>2 days or less</h3>
-                    <p>before the start date for a class, the registrant will not receive a credit or a refund.</p>
-                </div>
-                <div class="cancellation-policy">
-                    <h3>On the day or after</h3>
-                    <p>The Proprietary <b>cannot offer refunds, credits, or makeup sessions</b> for classes a student might miss.</p>
-                </div>
-            </div>
-        </section>
+        <div class="cancellation-details">
+          <div class="cancellation-policy">
+            <h3>10 days or more</h3>
+            <p>before the start date for a class, the registrant will receive a credit minus a 10% fee OR a refund minus
+              a 20% fee.</p>
+          </div>
+          <div class="cancellation-policy">
+            <h3>3-9 days</h3>
+            <p>before the start date for a class, the registrant will receive a credit minus a 15% fee OR a refund minus
+              a 30% fee.</p>
+          </div>
+          <div class="cancellation-policy">
+            <h3>2 days or less</h3>
+            <p>before the start date for a class, the registrant will not receive a credit or a refund.</p>
+          </div>
+          <div class="cancellation-policy">
+            <h3>On the day or after</h3>
+            <p>The Proprietary <b>cannot offer refunds, credits, or makeup sessions</b> for classes a student might
+              miss.</p>
+          </div>
+        </div>
+      </section>
     </section>
-      <!-- Footer -->
+    <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-section about">
-                <h4>About Us</h4>
-                <p>This is a sample footer with information about the website, its mission, and values.</p>
-            </div>
-            <div class="footer-section contact">
-                <h4>Contact Us</h4>
-                <div class="contact-info">
-                    <p><i class="fas fa-phone"></i> 123-456-7890</p>
-                    <p><i class="fas fa-envelope"></i> info@example.com</p>
-                </div>
-            </div>
-            <div class="footer-section newsletter">
-                <h4>Get Our Lastest News</h4>
-                <form action="#" method="post">
-                    <input type="email" name="email" placeholder="Your Email Address">
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h4>About Us</h4>
+          <p>This is a sample footer with information about the website, its mission, and values.</p>
         </div>
-        <div class="footer-bottom">
-            <p>© 2024 Your Website | <a href="#">Privacy & Terms</a></p>
+        <div class="footer-section contact">
+          <h4>Contact Us</h4>
+          <div class="contact-info">
+            <p><i class="fas fa-phone"></i> 123-456-7890</p>
+            <p><i class="fas fa-envelope"></i> info@example.com</p>
+          </div>
         </div>
+        <div class="footer-section newsletter">
+          <h4>Get Our Lastest News</h4>
+          <form action="#" method="post">
+            <input type="email" name="email" placeholder="Your Email Address">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Your Website | <a href="#">Privacy & Terms</a></p>
+      </div>
     </footer>
 
-</div>
+  </div>
 </body>
->>>>>>> 0cb7b8035f41cb6b9c36ff60b670220c670993d6
+
 </html>
